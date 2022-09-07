@@ -10,5 +10,8 @@ internal class Program
 
         director.makePizzaNormal(builderNormalPizza);
 
+        PizzaBillBuilder builderNormalPizzaBill = new PizzaBillBuilder();
+
+        director.makePizzaNormal(builderNormalPizzaBill);
     }
 }
