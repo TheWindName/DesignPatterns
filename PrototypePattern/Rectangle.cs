@@ -8,9 +8,14 @@ namespace PrototypePattern
 {
     internal class Rectangle : IShape
     {
-        int coordinateX;
-        int coordinateY;
+        #region Private Features
 
+        private int coordinateX;
+        private int coordinateY;
+
+        #endregion Private Features
+
+        #region Constructors
         /// <summary>
         /// Principal Constructor
         /// </summary>
@@ -37,6 +42,10 @@ namespace PrototypePattern
             this.coordinateX = rectangle.coordinateX;
             this.coordinateY = rectangle.coordinateY;
         }
+
+        #endregion Constructors
+
+        #region Internal Methods
 
         /// <summary>
         /// Get the X Coordinate
@@ -67,9 +76,15 @@ namespace PrototypePattern
             this.coordinateY = coordinateY;
         }
 
+        #endregion Internal Methods
+
+        #region Inheritance Methods
+
         IShape IShape.clone()
         {
             return new Rectangle(this);
         }
+
+        #endregion Inheritance Methods
     }
 }

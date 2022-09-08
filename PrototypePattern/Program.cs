@@ -14,6 +14,13 @@ internal class Program
 
         shapeRegistry.addShape("BasicRectangle", basicRectangle);
         shapeRegistry.addShape("BigRectangle", bigRectangle);
-        shapeRegistry.addShape("BasicRectangle", basicRectangle);
+        shapeRegistry.addShape("CopyBasicRectangle", copyBasicRectangle);
+
+        Rectangle? rectangleToShow = (Rectangle)shapeRegistry.getById("hola");
+
+        if(rectangleToShow != null)
+            Console.WriteLine($"Coordinate X ---> {rectangleToShow.getCoordinateX()} \nCoordinate Y ---> {rectangleToShow.getCoordinateY()}");
+        else
+            Console.WriteLine($"There isn't coordinates in the shape because we dind't find anything.");
     }
 }

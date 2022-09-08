@@ -29,7 +29,7 @@ namespace PrototypePattern
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        internal IShape? getById(string id)
+        internal IShape getById(string id)
         {
             return shape.ContainsKey(id) ? shape[id] : null;
         }
